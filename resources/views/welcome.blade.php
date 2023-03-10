@@ -52,6 +52,12 @@
             var parent = document.getElementById('latest_trade_user');
             var newText = '<li>' + obj.name + ' : '+ obj.message + '</li>';
             parent.insertAdjacentHTML('beforeend', newText);
+            playSound();
+        }
+
+        function playSound() {
+            const audio = new Audio("{{ asset('media/notification.mp3') }}");
+            audio.play();
         }
     </script>
 </html>
